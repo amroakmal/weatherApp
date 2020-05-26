@@ -19,15 +19,15 @@
             {% if api.0.Category.Name == "Good" %}
                 <p>(0-50) Air quality is considered satisfactory.</p>
             {% elif api.0.Category.Name == "Moderate" %}
-                <p>(51-100)Air quality is acceptable.</p>
+                <p>(51-100) Air quality is acceptable.</p>
             {% elif api.0.Category.Name == "Unhealty for Sensitive Groups" %}
-                <p>(101-150)Although general public is not likely to be affected at this AQI, but people suffering from lung diseases, older adults and children are at a great danger.</p>
+                <p>(101-150) Although general public is not likely to be affected at this AQI, but people suffering from lung diseases, older adults and children are at a great danger.</p>
             {% elif api.0.Category.Name == "Unhealthy" %}
-                <p>(151-200)Everyone may begin to experience health effects.</p>
+                <p>(151-200) Everyone may begin to experience health effects.</p>
             {% elif api.0.Category.Name == "Very Unhealthy" %}
-                <p>(201-300)Alert! Everyone may experience more serious health effects.</p>
+                <p>(201-300) Alert! Everyone may experience more serious health effects.</p>
             {% else %}
-                <p>(Greather Than 300)Health warnings of emergency conditions. The entire population is more likely to be affected.</p>
+                <p>(Greather Than 300) Health warnings of emergency conditions. The entire population is more likely to be affected.</p>
             {% endif %}
         </div>
     {% endif %}
