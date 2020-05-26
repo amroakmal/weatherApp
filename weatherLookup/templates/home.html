@@ -4,7 +4,15 @@
 
 <h1>Home page</h1>
 <br>
-Air Quality: {{api.0.AQI}} <br>
-Area: {{api.0.ReportingArea}} <br>
-Category: {{api.0.Category.Name}}
+
+{% if api %}
+    {% if api == "Error" %}
+        There was an Error! Please try again.
+    {% else %}
+        Air Quality: {{api.0.AQI}} <br>
+        Area: {{api.0.ReportingArea}} <br>
+        Category: {{api.0.Category.Name}}
+    {% endif %}
+{% endif %}
+
 {% endblock %}
