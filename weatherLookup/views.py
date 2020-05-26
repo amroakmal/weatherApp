@@ -8,9 +8,23 @@ def home(request):
     
     try:
         api = json.loads(api_request.content)
+        categoryColor = ""
+        category = api[0]['Category']['Name']
+        if(category == "Good"):
+            categoryColor = "good"
+        elif category == "Moderate":
+            categoryColor = "moderate"
+        elif category == "Unhealty for Sensitive Groups":
+            categoryColor = "usg"
+        elif category == "Unhealthy":
+            categoryColor = "unhealthy"
+        elif category == "Very Unhealthy":
+            categoryColor = "veryUnhealthy"
+        else:
+            categoryColor = "hazardous"
     except Exception as e:
         api = 'Error..'
-    return render(request, 'home.html', {'api': api})
+    return render(request, 'home.html', {'api': api, 'categoryColor': categoryColor})
 
 def about(request):
     return render(request, 'about.html')

@@ -10,7 +10,7 @@
     {% if api == "Error" %}
         There was an Error! Please try again.
     {% else %}
-        <div class="jumbotron">
+        <div class="jumbotron {{categoryColor}}">
             <h1 class="display-4">{{api.0.Category.Name}}</h1>
             <p class="lead">Current <u><em>{{api.0.ReportingArea}}</em></u> Air Quality: {{api.0.AQI}}</p>
             {% if api.0.Category.Name == "Good" %}
@@ -19,9 +19,9 @@
                 <p>(51-100 - )Air quality is acceptable.</p>
             {% elif api.0.Category.Name == "Unhealty for Sensitive Groups" %}
                 <p>(101-150 - )Although general public is not likely to be affected at this AQI, but people suffering from lung diseases, older adults and children are at a great danger.</p>
-            {% elif api.0.Category.Name == "Unhealty" %}
+            {% elif api.0.Category.Name == "Unhealthy" %}
                 <p>(151-200 - )Everyone may begin to experience health effects.</p>
-            {% elif api.0.Category.Name == "Very Unhealty" %}
+            {% elif api.0.Category.Name == "Very Unhealthy" %}
                 <p>(201-300 - )Alert! Everyone may experience more serious health effects.</p>
             {% else %}
                 <p>(Greather Than 300 - )Health warnings of emergency conditions. The entire population is more likely to be affected.</p>
