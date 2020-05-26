@@ -25,11 +25,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto" >
           </ul>
           <form class="form-inline my-2 my-lg-0" action="{% url 'home' %}" method="POST">
             {% csrf_token %}
-            <input class="form-control mr-sm-2" name="zipcode" type="search" placeholder="Enter your Zipcode" aria-label="Search">
+            <input class="form-control mr-sm-2" name="zipcode" type="search" placeholder="Enter your Zipcode" autocomplete="off" aria-label="Search">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Lookup</button>
           </form>
         </div>
